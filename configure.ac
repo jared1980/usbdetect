@@ -1,5 +1,5 @@
 
-AC_INIT([arc_dhcp_option_catcher], [1.0])
+AC_INIT([arc_tetheringd], [1.0])
 AC_CONFIG_AUX_DIR([build-aux])
 
 # AutoMake
