@@ -5,7 +5,7 @@ lib_LTLIBRARIES = libarc_tethering.la
 libarc_tethering_la_SOURCES = lib/libinotify.c
 libarc_tethering_la_LDFLAGS = -version-info 0:0:0
 libarc_tethering_la_CFLAGS = -ggdb -O0
-include_HEADERS = lib/.h
+include_HEADERS = lib/libinotify.h
 
 bin_PROGRAMS = arc_tetheringd
 arc_tetheringd_SOURCES = main/arc_tetheringd.c

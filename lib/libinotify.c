@@ -56,13 +56,13 @@ void inotify_add_watch_path_loop(const char *path, uint32_t mask)
         /* for event types, refer to https://man7.org/linux/man-pages/man7/inotify.7.html */
         if (event->len) {
             if (event->mask & IN_CREATE) {
-                printf("[Event IN_CREATE] The file %s/%s was created.\n", watch_path.c_str(), event->name);
+                printf("[Event IN_CREATE] The file %s/%s was created.\n", path, event->name);
             } else if (event->mask & IN_DELETE) {
-                printf("[Event IN_DELETE] The file %s/%s was deleted.\n", watch_path.c_str(), event->name);
+                printf("[Event IN_DELETE] The file %s/%s was deleted.\n", path, event->name);
             } else if (event->mask & IN_MODIFY) {
-                printf("[Event IN_MODIFY] The file %s/%s was modified.\n", watch_path.c_str(), event->name);
+                printf("[Event IN_MODIFY] The file %s/%s was modified.\n", path, event->name);
             } else if (event->mask & IN_ATTRIB) {
-                printf("[Event IN_ATTRIB] The file %s/%s was IN_ATTRIB.\n", watch_path.c_str(), event->name);
+                printf("[Event IN_ATTRIB] The file %s/%s was IN_ATTRIB.\n", path, event->name);
             }
         }
         i += EVENT_SIZE + event->len;
